@@ -33,7 +33,7 @@ namespace ItemsGeneratorTests
             var generatedItems = testlet.Randomize();
 
             Assert.That(generatedItems.Count, Is.EqualTo(Testlet.TOTAL_ITEMS_COUNT), 
-                $"Testlet.Randomaze() should return {Testlet.TOTAL_ITEMS_COUNT} items");
+                $"Testlet.Randomize() should return {Testlet.TOTAL_ITEMS_COUNT} items");
         }
 
         [Test]
@@ -48,7 +48,7 @@ namespace ItemsGeneratorTests
             // assert
             foreach (var item in generatedItems.Take(Testlet.SECTION_ONE_ITEMS_COUNT))
             {
-                Assert.That(item.ItemType, Is.EqualTo(ItemTypeEnum.Pretest), "Each of first two items shoud be pretest");
+                Assert.That(item.ItemType, Is.EqualTo(ItemTypeEnum.Pretest), "First section should contain only pretest items");
             }
         }
 
